@@ -12,7 +12,7 @@ jobs:
       - env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
         run: |
-          export DATE=$(date +'%d-%m-%Y') && \
+          export DATE=$(date +'%Y-%m-%d') && \
           curl "https://api.telegram.org/${TG_TOKEN}/sendMessage" \
               --data-urlencode "chat_id=-1001575225629" \
               --data-urlencode "text=[法說會資料更新](https://github.com/bangyuwen/stock7-local/blob/main/report/conference/${DATE}.md)" \
